@@ -5,7 +5,7 @@ function yres = P2Z45_SKU_rungekutty4order(a, b, n, bx, a_k, y0)
 % Solving linear m-th order differential equation
 % given below:
 % a_m(x)*y^{m} + a_{m-1}(x)*y^{m-1} + ... + a_1(x)*y' + a_0(x)*y = bx(x)
-% over the interval [a,b] using classic Runge–Kutta method (RK4)
+% over the interval [a,b] using classic Runge–Kutta method (also known as RK4)
 % INPUT:
 %   a,b  - ends of the interval
 %   n    - number of steps to be performed
@@ -37,6 +37,7 @@ Y = zeros(length(y0), n+1);
 Y(:,1) = y0;
 % RK4
 for k = 1:n
+    % executing one step of the RK4    
     K0 = h*F(Y(:,k));
     K1 = h*F(Y(:,k) + (1/2)*K0);
     K2 = h*F(Y(:,k) + (1/2)*K1);
