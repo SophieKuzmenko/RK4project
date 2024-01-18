@@ -44,6 +44,7 @@ for k = 1:n
     K3 = h*F(Y(:,k) + K2);
     Y(:,k+1) = Y(:,k) + (1/6)*K0 + (1/3)*K1 + (1/3)*K2 + (1/6)*K3;
 end
+% assigning the output
 yres = Y(2,:);
 
 end % function
