@@ -35,7 +35,7 @@ h = (b - a)/n;
 Y = zeros(length(y0), n+1);
 % assinging y0 as a starting point
 Y(:,1) = y0;
-% RK4
+
 for k = 1:n
     % executing one step of the RK4    
     K0 = h*F(Y(:,k));
