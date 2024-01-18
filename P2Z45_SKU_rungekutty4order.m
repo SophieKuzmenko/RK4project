@@ -37,7 +37,7 @@ Y = zeros(length(y0), n+1);
 Y(:,1) = y0;
 
 for k = 1:n
-    % executing one step of the RK4    
+    % executing a single step of the RK4    
     K0 = h*F(Y(:,k));
     K1 = h*F(Y(:,k) + (1/2)*K0);
     K2 = h*F(Y(:,k) + (1/2)*K1);
